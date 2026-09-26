@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap");
+
+:root {
+  --blue: #1385e5;
+  --navy: #001c46;
+  --ice: #cfecff;
+  --orange: #ff6b2c;
+  --paper: #f6f4ef;
+  --ink: #071525;
+  --bs-primary: var(--blue);
+  --bs-primary-rgb: 19, 133, 229;
+  --bs-dark-rgb: 0, 28, 70;
+  --bs-body-color: var(--ink);
+  --bs-body-bg: var(--paper);
+  --bs-body-font-family: "DM Sans", sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); }
+h1, h2, h3 { font-family: "Playfair Display", serif; }
+.ticker {
+  overflow: hidden;
+  background: var(--orange);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+.ticker div {
+  width: max-content;
+  padding-right: 2rem;
+  animation: ticker 26s linear infinite;
+}
+.ticker div:nth-child(2) {
+  animation-delay: -13s;
+}
+@keyframes ticker {
+  to { transform: translateX(-100%); }
+}
+.site-header .nav-link {
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link[aria-current="page"] {
+  color: var(--blue);
+}
+.btn-primary {
+  --bs-btn-bg: var(--blue);
+  --bs-btn-border-color: var(--blue);
+  --bs-btn-hover-bg: var(--navy);
+  --bs-btn-hover-border-color: var(--navy);
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--blue);
+  --bs-btn-border-color: var(--blue);
+  --bs-btn-hover-bg: var(--blue);
+  --bs-btn-hover-border-color: var(--blue);
+}
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 540px;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+}
+.hero::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 28, 70, .78), rgba(0, 28, 70, .35));
+  content: "";
+}
+.hero-img {
+  z-index: 0;
+  object-fit: cover;
+  object-position: center 42%;
+  opacity: .9;
+}
+.events-hero {
+  background: linear-gradient(115deg, var(--orange), #ff8855 48%, var(--ice));
+  color: var(--navy);
+}
+.product-image {
+  height: 19rem;
+  object-fit: cover;
+}
+
+@media (max-width: 575.98px) {
+  .hero { min-height: 490px; }
+  .product-image { height: 17rem; }
+}
