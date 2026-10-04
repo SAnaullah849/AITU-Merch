@@ -1,55 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#1385e5" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#001c46" />
+    <meta name="description" content="Browse AITU Merch apparel and review the static order form." />
     <title>Shop | AITU Merch</title>
     <link rel="icon" type="image/svg+xml" href="./store-favicon.svg" />
-    <!-- Bootstrap 5.3.3 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/bootstrap-overrides.css" />
   </head>
-  <body>
-    <div class="ticker">
-      <div>FREE CAMPUS PICKUP ON ORDERS OVER 20,000 ₸ • NEW SEMESTER DROP LIVE • DESIGNED IN ASTANA •&nbsp;</div>
-      <div aria-hidden="true">FREE CAMPUS PICKUP ON ORDERS OVER 20,000 ₸ • NEW SEMESTER DROP LIVE • DESIGNED IN ASTANA •&nbsp;</div>
-    </div>
-
-    <!-- container keeps this header aligned to the shop content below. -->
-    <header class="site-header sticky-top bg-white border-bottom"><nav class="navbar navbar-expand-lg container py-3" aria-label="Main navigation">
-      <a class="navbar-brand" href="./index.html" aria-label="AITU Store home"><img src="./assets/aitu_logo_110.png" alt="Astana IT University" width="185" /></a>
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNav"><div class="navbar-nav mx-auto gap-lg-3">
-        <a class="nav-link" href="./index.html#new">New drop</a><a class="nav-link" href="./shop.html" aria-current="page">Shop</a><a class="nav-link" href="./index.html#custom">Custom</a><a class="nav-link" href="./sunday-open.html">Events</a><a class="nav-link" href="./campus-life.html">Campus life</a>
-      </div><a class="btn btn-outline-dark btn-sm" href="./shop.html" aria-label="Browse the store">Bag <span class="badge text-bg-warning">0</span></a></div>
-    </nav></header>
-
+  <body id="top">
+    <div class="ticker" aria-label="AITU Merch campus collection"><p class="ticker-track mb-0">AITU MERCH · CAMPUS COLLECTION · ASTANA</p></div>
+    <header class="site-header sticky-top bg-white border-bottom">
+      <nav class="navbar container py-3" aria-label="Main navigation">
+        <a class="navbar-brand" href="./index.html" aria-label="AITU Merch home"><img src="./assets/aitu_logo_110.png" alt="Astana IT University" width="185" height="45" /></a>
+        <ul class="navbar-nav site-navigation flex-row flex-wrap justify-content-center gap-1 gap-lg-3" id="site-navigation">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./shop.html" aria-current="page">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#custom">Custom</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sunday-open.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="./campus-life.html">Campus life</a></li>
+          <li class="nav-item"><a class="nav-link" href="./campus-life.html#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn-outline-dark btn-sm" href="#order-form">Order form</a>
+      </nav>
+    </header>
     <main>
-      <!-- container constrains the catalog to a comfortable reading width. -->
-      <section id="shop" class="container py-5">
+      <section class="container py-5" aria-labelledby="shop-title">
         <div class="row align-items-end g-3 mb-4">
-          <div class="col-12 col-lg-7"><p class="small text-uppercase text-primary fw-bold mb-2">01 / Shop catalog</p><h1 class="display-3 fw-bold">AITU essentials.<br />Made to belong.</h1></div>
-          <p class="col-12 col-lg-5 lead text-body-secondary mb-0">Official apparel and everyday pieces for students, alumni and everyone building tomorrow.</p>
+          <div class="col-12 col-lg-7"><p class="section-kicker text-uppercase small fw-bold mb-2">01 / Shop catalog</p><h1 class="display-3 fw-bold" id="shop-title">AITU essentials.<br />Made to belong.</h1></div>
+          <p class="col-12 col-lg-5 lead text-body-secondary mb-0">Browse the campus collection and prepare an order review. Prices are shown in Kazakhstani tenge.</p>
         </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" id="product-list">
+          <article class="col" id="product-signature-hoodie"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00219.jpg" alt="AITU Signature Hoodie, navy" width="1600" height="1067" /><div class="card-body d-flex flex-column"><span class="badge text-bg-info align-self-start">Campus collection</span><h2 class="h5 card-title mt-3">AITU Signature Hoodie</h2><p class="small text-body-secondary">Apparel · Navy</p><p class="fw-bold mb-3">24,900 ₸</p><a class="btn btn-outline-primary mt-auto" id="choose-hoodie-link" href="#order-form">Choose this item</a></div></div></article>
+          <article class="col" id="product-campus-tee"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00196.jpg" alt="Campus Essential Tee, off-white" width="1600" height="1067" /><div class="card-body d-flex flex-column"><span class="badge text-bg-primary align-self-start">Campus collection</span><h2 class="h5 card-title mt-3">Campus Essential Tee</h2><p class="small text-body-secondary">Apparel · Off-white</p><p class="fw-bold mb-3">12,900 ₸</p><a class="btn btn-outline-primary mt-auto" id="choose-tee-link" href="#order-form">Choose this item</a></div></div></article>
+          <article class="col" id="product-track-jacket"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00105.jpg" alt="AITU Track Jacket, midnight" width="1600" height="1067" /><div class="card-body d-flex flex-column"><span class="badge text-bg-warning align-self-start">Campus collection</span><h2 class="h5 card-title mt-3">AITU Track Jacket</h2><p class="small text-body-secondary">Apparel · Midnight</p><p class="fw-bold mb-3">29,900 ₸</p><a class="btn btn-outline-primary mt-auto" id="choose-jacket-link" href="#order-form">Choose this item</a></div></div></article>
+          <article class="col" id="product-custom-crewneck"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00229.jpg" alt="Custom School Crewneck, sky blue" width="1600" height="1067" /><div class="card-body d-flex flex-column"><span class="badge text-bg-secondary align-self-start">Customizable</span><h2 class="h5 card-title mt-3">Custom School Crewneck</h2><p class="small text-body-secondary">Print on demand · Sky</p><p class="fw-bold mb-3">22,900 ₸</p><a class="btn btn-outline-primary mt-auto" id="choose-crewneck-link" href="#order-form">Choose this item</a></div></div></article>
+        </div>
+      </section>
 
-        <!-- Bootstrap card component: existing merchandise content adapted into card-body and card-title. -->
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-          <article class="col"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00219.jpg" alt="AITU Signature Hoodie" /><div class="card-body"><span class="badge text-bg-info">Bestseller</span><h2 class="h5 card-title mt-3">AITU Signature Hoodie</h2><p class="small text-body-secondary">Apparel · Navy</p><p class="fw-bold mb-0">24,900 ₸</p></div></div></article>
-          <article class="col"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00196.jpg" alt="Campus Essential Tee" /><div class="card-body"><span class="badge text-bg-primary">New drop</span><h2 class="h5 card-title mt-3">Campus Essential Tee</h2><p class="small text-body-secondary">Apparel · Off-white</p><p class="fw-bold mb-0">12,900 ₸</p></div></div></article>
-          <article class="col"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00105.jpg" alt="AITU Track Jacket" /><div class="card-body"><span class="badge text-bg-warning">Limited</span><h2 class="h5 card-title mt-3">AITU Track Jacket</h2><p class="small text-body-secondary">Apparel · Midnight</p><p class="fw-bold mb-0">29,900 ₸</p></div></div></article>
-          <article class="col"><div class="card h-100 shadow-sm"><img class="card-img-top product-image" src="./assets/DSC00229.jpg" alt="Custom School Crewneck" /><div class="card-body"><span class="badge text-bg-secondary">Print on demand</span><h2 class="h5 card-title mt-3">Custom School Crewneck</h2><p class="small text-body-secondary">Print on demand · Sky</p><p class="fw-bold mb-0">22,900 ₸</p></div></div></article>
+      <section class="order-section py-5" aria-labelledby="order-title">
+        <div class="container">
+          <div class="row g-4 align-items-start">
+            <div class="col-12 col-lg-5">
+              <p class="section-kicker text-uppercase small fw-bold mb-2">02 / Prepare an order</p>
+              <h2 class="display-5 fw-bold" id="order-title">Choose your piece.</h2>
+              <p class="lead">Select an item, size and quantity to review your choices on the next page.</p>
+              <p class="small text-body-secondary">This HTML-only preview does not collect contact details, take payment, send orders or reserve stock. Submitting opens an explanatory review screen; it is not a purchase.</p>
+              <p class="small text-body-secondary mb-0">Prices shown above are the collection's listed prices. Campus pickup and shipping policies have not been supplied for this project, so delivery options are not offered.</p>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="card shadow-sm"><div class="card-body p-4">
+                <form id="order-form" action="./request-review.html" method="get" aria-describedby="order-help order-result">
+                  <h3 class="h4" id="order-title-form">Order review</h3>
+                  <p id="order-help" class="small text-body-secondary">Choose a product below. Your selection is carried to the review page as non-sensitive form data.</p>
+                  <div class="mb-3">
+                    <label class="form-label" for="order-product">Product</label>
+                    <select class="form-select" id="order-product" name="product" required>
+                      <option value="" selected disabled>Select a product</option>
+                      <option value="AITU Signature Hoodie">AITU Signature Hoodie — 24,900 ₸</option>
+                      <option value="Campus Essential Tee">Campus Essential Tee — 12,900 ₸</option>
+                      <option value="AITU Track Jacket">AITU Track Jacket — 29,900 ₸</option>
+                      <option value="Custom School Crewneck">Custom School Crewneck — 22,900 ₸</option>
+                    </select>
+                  </div>
+                  <div class="row g-3">
+                    <div class="col-12 col-sm-6">
+                      <label class="form-label" for="order-size">Size</label>
+                      <select class="form-select" id="order-size" name="size" required>
+                        <option value="" selected disabled>Select a size</option><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="XXL">XXL</option>
+                      </select>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                      <label class="form-label" for="order-quantity">Quantity</label>
+                      <input class="form-control" id="order-quantity" name="quantity" type="number" min="1" max="10" step="1" value="1" required />
+                    </div>
+                  </div>
+                  <div class="order-total border-top mt-4 pt-3">
+                    <span class="fw-semibold">Order total</span>
+                    <output class="d-block text-body-secondary" id="order-total" for="order-product order-quantity">The total for your selection will be shown in the review step.</output>
+                  </div>
+                  <div class="form-status is-hidden mt-3" id="order-result" aria-live="polite"></div>
+                  <button class="btn btn-primary btn-lg w-100 mt-4" id="order-submit" type="submit">Review order details</button>
+                  <p class="small text-body-secondary mt-3 mb-0">No payment is taken. The review page explains that this static site cannot submit or reserve an order.</p>
+                </form>
+              </div></div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-
-    <footer class="bg-dark text-white py-5"><div class="container"><div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-        <div class="col"><h3>Official merchandise for the<br />Astana IT University community.</h3></div>
-        <div class="col"><ul class="list-unstyled"><li class="mb-2">Shop</li><li class="mb-2">New arrivals</li><li class="mb-2">Apparel</li><li>Accessories</li></ul></div>
-        <div class="col"><ul class="list-unstyled"><li class="mb-2">Support</li><li class="mb-2">Campus pickup</li><li class="mb-2">Size guide</li><li>Returns</li></ul></div>
-      </div></div>
+    <footer class="site-footer bg-dark text-white py-5">
+      <div class="container"><div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <div class="col"><a class="footer-brand" href="./index.html">AITU Merch</a><p class="mt-2 mb-0">Campus collection for the Astana IT University community.</p></div>
+        <div class="col"><h2 class="h6 text-uppercase">Explore</h2><ul class="list-unstyled mb-0"><li class="mb-2"><a href="./index.html">Home</a></li><li class="mb-2"><a href="./shop.html">Shop and order details</a></li><li class="mb-2"><a href="./index.html#custom">Custom apparel</a></li></ul></div>
+        <div class="col"><h2 class="h6 text-uppercase">Campus</h2><ul class="list-unstyled mb-0"><li class="mb-2"><a href="./sunday-open.html">Events</a></li><li class="mb-2"><a href="./campus-life.html">Campus life and address</a></li><li><a href="./campus-life.html#contact">Contact information</a></li></ul></div>
+      </div><p class="footer-note border-top border-secondary pt-3 mt-4 mb-0">Static storefront preview · no orders or event bookings are transmitted.</p></div>
     </footer>
-    <!-- Bootstrap 5.3.3 bundle enables the responsive navbar toggler. -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
