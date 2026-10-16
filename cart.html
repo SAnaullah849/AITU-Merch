@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#001c46" />
+    <meta name="description" content="Review the items in your AITU Merch cart." />
+    <title>Cart | AITU Merch</title>
+    <link rel="icon" type="image/svg+xml" href="./store-favicon.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/bootstrap-overrides.css" />
+  </head>
+  <body id="top">
+    <div class="ticker" aria-label="AITU Merch campus collection"><p class="ticker-track mb-0">AITU MERCH · CAMPUS COLLECTION · ASTANA</p></div>
+    <header class="site-header sticky-top bg-white border-bottom">
+      <nav class="navbar container py-3" aria-label="Main navigation">
+        <a class="navbar-brand" href="./index.html" aria-label="AITU Merch home"><img src="./assets/aitu_logo_110.png" alt="Astana IT University" width="185" height="45" /></a>
+        <ul class="navbar-nav site-navigation flex-row flex-wrap justify-content-center gap-1 gap-lg-3" id="site-navigation">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="./index.html#custom">Custom</a></li>
+          <li class="nav-item"><a class="nav-link" href="./sunday-open.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="./campus-life.html">Campus life</a></li>
+          <li class="nav-item"><a class="nav-link" href="./campus-life.html#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="./cart.html" aria-current="page">Cart <span class="badge text-bg-primary" id="cart-count">0</span></a></li>
+        </ul>
+        <a class="btn btn-outline-dark btn-sm" href="./shop.html#order-form">Order form</a>
+      </nav>
+    </header>
+    <main>
+      <section class="container py-5" aria-labelledby="cart-title">
+        <p class="section-kicker text-uppercase small fw-bold mb-2">Your cart</p>
+        <h1 class="display-4 fw-bold mb-4" id="cart-title">Review your items.</h1>
+
+        <div class="form-status" id="cart-empty">
+          Your cart is empty. <a href="./shop.html">Browse the shop</a>.
+        </div>
+
+        <div class="d-none" id="cart-table-box">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Subtotal</th>
+                  <th scope="col"><span class="visually-hidden">Remove</span></th>
+                </tr>
+              </thead>
+              <tbody id="cart-items"></tbody>
+            </table>
+          </div>
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 border-top pt-3">
+            <p class="h4 mb-0">Total: <output id="cart-total">0 ₸</output></p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-secondary" id="cart-clear" type="button">Clear cart</button>
+              <a class="btn btn-primary" id="cart-review-link" href="./request-review.html">Review order details</a>
+            </div>
+          </div>
+          <p class="small text-body-secondary mt-3 mb-0">No payment is taken and no order is sent. The cart is saved only in this browser.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer bg-dark text-white py-5">
+      <div class="container"><p class="footer-note mb-0">Static storefront preview · no orders or event bookings are transmitted.</p></div>
+    </footer>
+    <script src="./assets/store.js" defer></script>
+  </body>
+</html>
