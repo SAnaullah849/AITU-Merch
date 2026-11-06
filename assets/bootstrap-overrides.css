@@ -162,6 +162,11 @@ textarea:focus-visible {
   background: var(--paper);
 }
 
+.custom-step:hover {
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
 .events-hero {
   background: linear-gradient(115deg, var(--orange), #ff8855 48%, var(--ice));
   color: var(--navy);
